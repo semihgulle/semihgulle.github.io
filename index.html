@@ -1,1 +1,359 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Semih Gülle, MD — Rheumatology, Dokuz Eylül University</title>
+<meta name="description" content="Academic page of Semih Gülle, MD — rheumatologist at Dokuz Eylül University, İzmir. Spondyloarthritis, psoriatic arthritis, systemic sclerosis, musculoskeletal ultrasound.">
+<link rel="canonical" href="https://semihgulle.github.io/">
 
+<!-- ============================================================
+     EDIT HERE — the only values you normally need to change
+     ============================================================ -->
+<script>
+const CONFIG = {
+  orcid: "0000-0001-8679-2130",
+  researchgate: "https://www.researchgate.net/profile/Semih-Guelle",
+  avesis: "https://avesis.deu.edu.tr/semih.gulle",
+  scholar: "https://scholar.google.com.tr/citations?user=GEpPZS0AAAAJ",
+  scopus: "https://www.scopus.com/authid/detail.uri?authorId=56597947000",
+  wos: "https://www.webofscience.com/wos/author/record/QPA-3214-2026",
+  email: "semih.gulle@deu.edu.tr",
+  // Typed in by hand — no public API for these. Source: AVESİS metrics panel.
+  metrics: {
+    updated: "September 2026",
+    wos:     { citations: 66, h: 5 },
+    scopus:  { citations: 52, h: 4 },
+    scholar: { citations: 94, h: 5 },
+    counts:  { articles: 54, abstracts: 58, chapters: 2 }
+  }
+};
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --paper:#F7F7F5;
+  --ink:#16202B;
+  --ink-soft:#4A5A69;
+  --rule:#D9DDDF;
+  --field:#0E5C6B;      /* Doppler teal — links, active states */
+  --field-tint:#E7F0F1;
+  --signal:#B4472E;     /* used once, for live-data emphasis */
+  --serif:"Newsreader",Georgia,serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--sans);font-size:16px;line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--field);text-decoration:none;border-bottom:1px solid rgba(14,92,107,.3)}
+a:hover{border-bottom-color:var(--field)}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--field);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;margin:0}
+
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;
+  display:grid;grid-template-columns:250px 1fr;gap:64px;align-items:start}
+
+/* ---- left rail ---- */
+.rail{position:sticky;top:0;padding:56px 0 40px}
+.rail h1{font-size:30px;line-height:1.15}
+.rail .role{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink-soft);margin-top:6px}
+.rail .place{font-size:14px;color:var(--ink-soft);margin-top:14px;line-height:1.5}
+.nav{margin-top:28px;padding-top:20px;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:7px}
+.nav a{color:var(--ink);border:0;font-size:15px;width:fit-content}
+.nav a:hover{color:var(--field)}
+.ids{margin-top:24px;padding-top:20px;border-top:1px solid var(--rule);
+  display:flex;flex-direction:column;gap:7px;font-size:14px}
+.ids a{border:0;color:var(--ink-soft)}
+.ids a:hover{color:var(--field)}
+.lang{margin-top:24px;font-size:13px;color:var(--ink-soft)}
+.lang button{font:inherit;background:none;border:0;padding:0 4px;cursor:pointer;color:var(--ink-soft);
+  border-bottom:1px solid transparent}
+.lang button[aria-pressed=true]{color:var(--ink);border-bottom-color:var(--field)}
+
+/* ---- main ---- */
+main{padding:56px 0 96px;max-width:70ch}
+section+section{margin-top:56px;padding-top:40px;border-top:1px solid var(--rule)}
+.lede{font-family:var(--serif);font-size:24px;line-height:1.45;margin:0}
+.lede+p{margin-top:20px;color:var(--ink-soft)}
+h2{font-size:15px;font-family:var(--sans);font-weight:600;color:var(--ink-soft);margin-bottom:20px}
+
+.focus{display:grid;gap:26px}
+.focus h3{font-size:20px}
+.focus p{margin:5px 0 0;color:var(--ink-soft);font-size:15px}
+
+/* ---- publications ---- */
+.pubhead{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:18px}
+.count{font-family:var(--serif);font-size:15px;color:var(--ink-soft)}
+.count b{color:var(--signal);font-weight:500}
+#q{font:inherit;font-size:14px;padding:8px 12px;width:230px;max-width:100%;
+  border:1px solid var(--rule);border-radius:2px;background:#fff;color:var(--ink)}
+.year{display:grid;grid-template-columns:52px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--rule)}
+.year:first-of-type{border-top:0}
+.year>span{font-family:var(--serif);font-size:17px;color:var(--ink-soft);padding-top:2px}
+.work{margin:0 0 14px}
+.work:last-child{margin-bottom:0}
+.work .t{display:block;color:var(--ink);border:0;font-size:15.5px;line-height:1.45}
+.work a.t:hover{color:var(--field)}
+.work .j{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-soft)}
+.state{color:var(--ink-soft);font-size:15px}
+
+/* ---- researchgate ---- */
+.rg{background:var(--field-tint);border-radius:3px;padding:22px 24px;display:grid;gap:16px}
+.rg .figs{display:flex;gap:36px;flex-wrap:wrap}
+.rg .figs div{display:flex;flex-direction:column}
+.rg .n{font-family:var(--serif);font-size:30px;line-height:1}
+.rg .l{font-size:13px;color:var(--ink-soft);margin-top:4px}
+.rg p{margin:0;font-size:14.5px;color:var(--ink-soft)}
+.stamp{font-size:12.5px;color:var(--ink-soft)}
+
+footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;font-size:13px;color:var(--ink-soft)}
+
+@media (max-width:860px){
+  .wrap{grid-template-columns:1fr;gap:0}
+  .rail{position:static;padding:40px 0 0}
+  .nav{flex-direction:row;flex-wrap:wrap;gap:16px}
+  main{padding-top:36px}
+  .year{grid-template-columns:44px 1fr;gap:14px}
+}
+@media (prefers-reduced-motion:no-preference){
+  .state{transition:opacity .2s}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <aside class="rail">
+    <h1>Semih Gülle</h1>
+    <div class="role" data-i18n="role">MD, Rheumatology</div>
+    <div class="place" data-i18n="place">Assistant Professor<br>Division of Rheumatology<br>Dokuz Eylül University School of Medicine<br>İzmir, Türkiye</div>
+
+    <nav class="nav">
+      <a href="#about" data-i18n="nav1">About</a>
+      <a href="#research" data-i18n="nav2">Research</a>
+      <a href="#publications" data-i18n="nav3">Publications</a>
+      <a href="#contact" data-i18n="nav4">Contact</a>
+    </nav>
+
+    <div class="ids" id="ids"></div>
+
+    <div class="lang">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>·<button type="button" data-lang="tr" aria-pressed="false">TR</button>
+    </div>
+  </aside>
+
+  <main>
+    <section id="about">
+      <p class="lede" data-i18n="lede">I am a rheumatologist in İzmir working on spondyloarthritis — how it behaves in real-world registries, and what happens in the tissue before it becomes visible in the clinic.</p>
+      <p data-i18n="about">Clinically I run a general academic rheumatology practice with a focus on axial spondyloarthritis, psoriatic arthritis and systemic sclerosis, including musculoskeletal ultrasound of peripheral joints and entheses. My research runs on two tracks: outcomes from the TURKBIO registry and the EuroSpA collaboration, and experimental work on fibrosis and enthesitis in animal models, carried out through the Department of Laboratory Animal Science.</p>
+    </section>
+
+    <section id="research">
+      <h2 data-i18n="h_research">Research</h2>
+      <div class="focus">
+        <div>
+          <h3 data-i18n="r1t">Axial spondyloarthritis and psoriatic arthritis</h3>
+          <p data-i18n="r1p">Treatment response, drug survival, switching and swapping of biologics in real-life cohorts, using TURKBIO and EuroSpA data.</p>
+        </div>
+        <div>
+          <h3 data-i18n="r2t">Ultrasound of the enthesis</h3>
+          <p data-i18n="r2p">Ongoing PhD work on high-resolution ultrasound in an experimental spondyloarthritis model, validated against histopathology.</p>
+        </div>
+        <div>
+          <h3 data-i18n="r3t">Fibrosis in systemic sclerosis</h3>
+          <p data-i18n="r3p">Skin and lung fibrosis in the bleomycin mouse model, including the effect of JAK1/2 inhibition.</p>
+        </div>
+        <div>
+          <h3 data-i18n="r4t">Autoinflammatory diseases</h3>
+          <p data-i18n="r4p">Clinical phenotypes and long-term outcomes of monogenic and undifferentiated autoinflammatory syndromes.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications">
+      <div class="pubhead">
+        <h2 style="margin:0" data-i18n="h_pubs">Publications</h2>
+        <input id="q" type="search" placeholder="Filter by title or journal" aria-label="Filter publications">
+      </div>
+      <div class="count" id="count"></div>
+      <div id="pubs"><p class="state" data-i18n="loading">Loading publications from ORCID…</p></div>
+    </section>
+
+    <section id="metrics">
+      <h2 data-i18n="h_rg">Citations and profiles</h2>
+      <div class="rg">
+        <div class="figs">
+          <div><span class="n" id="m-wos"></span><span class="l" data-i18n="m_wos">citations, Web of Science (h 5)</span></div>
+          <div><span class="n" id="m-scopus"></span><span class="l" data-i18n="m_scopus">citations, Scopus (h 4)</span></div>
+          <div><span class="n" id="m-scholar"></span><span class="l" data-i18n="m_scholar">citations, Google Scholar (h 5)</span></div>
+        </div>
+        <p data-i18n="rg_text">The list above covers journal articles. Alongside these there are 58 conference abstracts, mostly EULAR and national rheumatology congress presentations, and two book chapters — on systemic sclerosis and on certolizumab pegol in axial spondyloarthritis. Full texts and abstracts are collected on ResearchGate; the complete institutional record, including projects and teaching, is on AVESİS.</p>
+        <p class="stamp"><a id="rg-link" href="#">ResearchGate</a> · <a id="av-link" href="#">AVESİS</a> · <span data-i18n="rg_stamp">figures updated</span> <span id="rg-date"></span></p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 data-i18n="h_contact">Contact</h2>
+      <p><a id="mail" href="#"></a><br>
+      <span data-i18n="addr">Division of Rheumatology, Dokuz Eylül University School of Medicine, İnciraltı, 35340 İzmir, Türkiye</span></p>
+      <p class="stamp" data-i18n="collab">Open to collaboration on spondyloarthritis cohorts and preclinical imaging studies.</p>
+    </section>
+
+    <footer>
+      <span data-i18n="foot">Publication list is pulled live from ORCID.</span>
+      <span id="foot-year"></span>
+    </footer>
+  </main>
+</div>
+
+<script>
+/* ---------------- language ---------------- */
+const TR = {
+  role:"Uzm. Dr., Romatoloji",
+  place:"Dr. Öğr. Üyesi<br>Romatoloji Bilim Dalı<br>Dokuz Eylül Üniversitesi Tıp Fakültesi<br>İzmir, Türkiye",
+  nav1:"Hakkımda", nav2:"Araştırma", nav3:"Yayınlar", nav4:"İletişim",
+  lede:"İzmir'de çalışan bir romatoloğum. İlgi alanım spondiloartrit: gerçek yaşam kayıt sistemlerinde nasıl seyrettiği ve klinikte görünür hâle gelmeden önce dokuda ne olduğu.",
+  about:"Klinikte aksiyel spondiloartrit, psoriatik artrit ve sistemik skleroz ağırlıklı genel bir akademik romatoloji pratiği yürütüyorum; periferik eklem ve entez ultrasonografisi yapıyorum. Araştırmalarım iki hat üzerinde ilerliyor: TURKBIO kayıt sistemi ve EuroSpA iş birliğinden elde edilen gerçek yaşam sonuçları ile Laboratuar Hayvanları Bilimi Anabilim Dalı bünyesinde yürüttüğüm fibrozis ve entezit deney modelleri.",
+  h_research:"Araştırma",
+  r1t:"Aksiyel spondiloartrit ve psoriatik artrit",
+  r1p:"TURKBIO ve EuroSpA verileriyle gerçek yaşam kohortlarında tedavi yanıtı, ilaç sürvisi, biyolojik ajan değişimleri.",
+  r2t:"Entez ultrasonografisi",
+  r2p:"Deneysel spondiloartrit modelinde yüksek çözünürlüklü ultrasonografi ve histopatolojik doğrulaması üzerine süren doktora çalışması.",
+  r3t:"Sistemik sklerozda fibrozis",
+  r3p:"Bleomisin fare modelinde cilt ve akciğer fibrozisi; JAK1/2 inhibisyonunun etkisi.",
+  r4t:"Otoinflamatuvar hastalıklar",
+  r4p:"Monogenik ve sınıflandırılamayan otoinflamatuvar sendromlarda klinik fenotip ve uzun dönem sonuçlar.",
+  h_pubs:"Yayınlar", loading:"Yayınlar ORCID'den yükleniyor…",
+  h_rg:"Atıflar ve profiller",
+  m_wos:"atıf, Web of Science (h 5)", m_scopus:"atıf, Scopus (h 4)", m_scholar:"atıf, Google Scholar (h 5)",
+  rg_text:"Yukarıdaki liste makaleleri kapsıyor. Bunların yanında çoğu EULAR ve ulusal romatoloji kongrelerinde sunulmuş 58 bildiri ile iki kitap bölümü var: sistemik skleroz ve aksiyel spondiloartritte sertolizumab pegol. Tam metinler ve bildiriler ResearchGate'te; projeler ve eğitim faaliyetleri dâhil kurumsal kayıt AVESİS'te.",
+  rg_stamp:"veriler güncellendi:",
+  h_contact:"İletişim",
+  addr:"Dokuz Eylül Üniversitesi Tıp Fakültesi, Romatoloji Bilim Dalı, İnciraltı, 35340 İzmir",
+  collab:"Spondiloartrit kohortları ve preklinik görüntüleme çalışmalarında iş birliğine açığım.",
+  foot:"Yayın listesi ORCID'den canlı olarak çekilmektedir.",
+  ids_orcid:"ORCID", ids_rg:"ResearchGate", ids_av:"AVESİS", ids_gs:"Google Scholar", ids_mail:"E-posta",
+  rg_link:"ResearchGate profilini aç",
+  empty:"Bu aramayla eşleşen yayın yok.",
+  error:"Yayınlar şu anda yüklenemedi. Tam liste ORCID profilinde:"
+};
+const EN = {};
+document.querySelectorAll("[data-i18n]").forEach(el => EN[el.dataset.i18n] = el.innerHTML);
+Object.assign(EN, {
+  ids_orcid:"ORCID", ids_rg:"ResearchGate", ids_av:"AVESIS", ids_gs:"Google Scholar", ids_mail:"Email",
+  rg_link:"View profile on ResearchGate",
+  empty:"No publication matches that filter.",
+  error:"Publications could not be loaded right now. The full list is on ORCID:"
+});
+let L = EN;
+
+function setLang(code){
+  L = code === "tr" ? TR : EN;
+  document.documentElement.lang = code;
+  document.querySelectorAll("[data-i18n]").forEach(el=>{
+    const v = L[el.dataset.i18n] ?? EN[el.dataset.i18n];
+    if (v !== undefined) el.innerHTML = v;
+  });
+  document.querySelectorAll(".lang button").forEach(b=>
+    b.setAttribute("aria-pressed", String(b.dataset.lang === code)));
+  document.getElementById("q").placeholder = code === "tr" ? "Başlık veya dergide ara" : "Filter by title or journal";
+  document.getElementById("rg-link").textContent = L.rg_link;
+  buildIds();
+  render();
+}
+document.querySelectorAll(".lang button").forEach(b=>
+  b.addEventListener("click", ()=> setLang(b.dataset.lang)));
+
+/* ---------------- static links ---------------- */
+function buildIds(){
+  const items = [
+    ["https://orcid.org/" + CONFIG.orcid, L.ids_orcid],
+    CONFIG.scholar ? [CONFIG.scholar, L.ids_gs] : null,
+    CONFIG.scopus ? [CONFIG.scopus, "Scopus"] : null,
+    CONFIG.wos ? [CONFIG.wos, "Web of Science"] : null,
+    [CONFIG.researchgate, L.ids_rg],
+    [CONFIG.avesis, L.ids_av],
+    ["mailto:" + CONFIG.email, L.ids_mail]
+  ].filter(Boolean);
+  document.getElementById("ids").innerHTML =
+    items.map(([h,t]) => `<a href="${h}"${h.startsWith("http")?' target="_blank" rel="noopener"':''}>${t}</a>`).join("");
+}
+document.getElementById("m-wos").textContent     = CONFIG.metrics.wos.citations;
+document.getElementById("m-scopus").textContent  = CONFIG.metrics.scopus.citations;
+document.getElementById("m-scholar").textContent = CONFIG.metrics.scholar.citations;
+document.getElementById("rg-date").textContent   = CONFIG.metrics.updated;
+document.getElementById("rg-link").href = CONFIG.researchgate;
+document.getElementById("av-link").href = CONFIG.avesis;
+const mail = document.getElementById("mail");
+mail.href = "mailto:" + CONFIG.email; mail.textContent = CONFIG.email;
+document.getElementById("foot-year").textContent = "© " + new Date().getFullYear() + " Semih Gülle";
+
+/* ---------------- ORCID ---------------- */
+let works = [], failed = false;
+
+function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
+
+async function loadWorks(){
+  const url = `https://pub.orcid.org/v3.0/${CONFIG.orcid}/works`;
+  const res = await fetch(url, { headers: { Accept: "application/json" } });
+  if (!res.ok) throw new Error(res.status);
+  const data = await res.json();
+  works = (data.group || []).map(g => {
+    const w = g["work-summary"][0];
+    const doi = (g["external-ids"]?.["external-id"] || [])
+      .find(x => x["external-id-type"] === "doi");
+    return {
+      title: w.title?.title?.value || "Untitled",
+      journal: w["journal-title"]?.value || "",
+      year: w["publication-date"]?.year?.value || "",
+      link: doi ? "https://doi.org/" + doi["external-id-value"] : (w.url?.value || "")
+    };
+  }).sort((a,b) => (b.year||0) - (a.year||0) || a.title.localeCompare(b.title));
+}
+
+function render(){
+  const box = document.getElementById("pubs");
+  const countEl = document.getElementById("count");
+  if (failed){
+    countEl.textContent = "";
+    box.innerHTML = `<p class="state">${L.error}
+      <a href="https://orcid.org/${CONFIG.orcid}" target="_blank" rel="noopener">orcid.org/${CONFIG.orcid}</a></p>`;
+    return;
+  }
+  if (!works.length){ return; }
+
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const list = q ? works.filter(w => (w.title + " " + w.journal).toLowerCase().includes(q)) : works;
+
+  countEl.innerHTML = `<b>${list.length}</b> ${L === TR ? "kayıt" : (list.length === 1 ? "record" : "records")}` +
+    (q ? ` / ${works.length}` : "");
+
+  if (!list.length){ box.innerHTML = `<p class="state">${L.empty}</p>`; return; }
+
+  const byYear = {};
+  list.forEach(w => (byYear[w.year || "—"] ||= []).push(w));
+  box.innerHTML = Object.keys(byYear)
+    .sort((a,b) => (b === "—" ? -1 : a === "—" ? 1 : b - a))
+    .map(y => `<div class="year"><span>${esc(y)}</span><div>` +
+      byYear[y].map(w => `<p class="work">` +
+        (w.link ? `<a class="t" href="${esc(w.link)}" target="_blank" rel="noopener">${esc(w.title)}</a>`
+                : `<span class="t">${esc(w.title)}</span>`) +
+        (w.journal ? `<span class="j">${esc(w.journal)}</span>` : "") +
+      `</p>`).join("") +
+    `</div></div>`).join("");
+}
+
+document.getElementById("q").addEventListener("input", render);
+
+loadWorks().then(render).catch(() => { failed = true; render(); });
+</script>
+</body>
+</html>
