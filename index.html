@@ -4,12 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Semih Gülle, MD — Rheumatology, Dokuz Eylül University</title>
-<meta name="description" content="Academic page of Semih Gülle, MD — rheumatologist at Dokuz Eylül University, İzmir. Spondyloarthritis, psoriatic arthritis, systemic sclerosis, musculoskeletal ultrasound.">
+<meta name="description" content="Semih Gülle, MD — rheumatologist at Dokuz Eylül University, İzmir. Axial spondyloarthritis, psoriatic arthritis, autoinflammatory disease, musculoskeletal ultrasound and preclinical models.">
 <link rel="canonical" href="https://semihgulle.github.io/">
 
-<!-- ============================================================
-     EDIT HERE — the only values you normally need to change
-     ============================================================ -->
+<!-- ===== EDIT HERE ===== -->
 <script>
 const CONFIG = {
   orcid: "0000-0001-8679-2130",
@@ -19,341 +17,328 @@ const CONFIG = {
   scopus: "https://www.scopus.com/authid/detail.uri?authorId=56597947000",
   wos: "https://www.webofscience.com/wos/author/record/QPA-3214-2026",
   email: "semih.gulle@deu.edu.tr",
-  // Typed in by hand — no public API for these. Source: AVESİS metrics panel.
-  metrics: {
-    updated: "September 2026",
-    wos:     { citations: 66, h: 5 },
-    scopus:  { citations: 52, h: 4 },
-    scholar: { citations: 94, h: 5 },
-    counts:  { articles: 54, abstracts: 58, chapters: 2 }
-  }
+  metrics: { wos: 66, scopus: 52, scholar: 94, h: 5, updated: "09.2026" }
 };
 </script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
 :root{
-  --paper:#F7F7F5;
-  --ink:#16202B;
-  --ink-soft:#4A5A69;
-  --rule:#D9DDDF;
-  --field:#0E5C6B;      /* Doppler teal — links, active states */
-  --field-tint:#E7F0F1;
-  --signal:#B4472E;     /* used once, for live-data emphasis */
+  --ink:#0B1620;
+  --ink-2:#132532;
+  --paper:#F6F5F2;
+  --paper-2:#FFFFFF;
+  --text:#17242F;
+  --muted:#5C6B77;
+  --line:#E2E0DA;
+  --cyan:#2FB3BE;
+  --deep:#0D6874;
+  --coral:#D9613F;
   --serif:"Newsreader",Georgia,serif;
-  --sans:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+  --sans:"IBM Plex Sans",system-ui,sans-serif;
 }
 *{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{
-  margin:0;background:var(--paper);color:var(--ink);
-  font-family:var(--sans);font-size:16px;line-height:1.6;
-  -webkit-font-smoothing:antialiased;
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.62;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;margin:0}
+a{color:var(--deep);text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:2px}
+
+.layout{display:grid;grid-template-columns:296px 1fr;min-height:100vh}
+
+/* ---------- rail ---------- */
+.rail{background:var(--ink);color:#DCE5EA;position:sticky;top:0;height:100vh;
+  padding:44px 34px;display:flex;flex-direction:column;overflow:hidden}
+.rail::after{content:"";position:absolute;width:340px;height:340px;right:-150px;top:-120px;
+  background:radial-gradient(circle,rgba(47,179,190,.30),transparent 65%);pointer-events:none}
+.rail .mark{width:34px;height:34px;margin-bottom:26px;opacity:.9}
+.rail h1{color:#fff;font-size:31px;line-height:1.12}
+.rail .role{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--cyan);margin-top:8px}
+.rail .place{font-size:13.5px;color:#8FA2AE;margin-top:16px;line-height:1.55}
+.rail nav{margin-top:auto;padding-top:30px;display:flex;flex-direction:column;gap:2px;position:relative;z-index:1}
+.rail nav a{color:#C6D3DA;font-size:15px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.07);
+  display:flex;justify-content:space-between;align-items:center;transition:color .18s,padding-left .18s}
+.rail nav a:hover{color:#fff;padding-left:5px}
+.rail nav a.tab{color:#fff;background:rgba(47,179,190,.13);border:1px solid rgba(47,179,190,.35);
+  border-radius:3px;padding:9px 12px;margin-top:12px}
+.rail nav a.tab:hover{background:rgba(47,179,190,.22);padding-left:12px}
+.ids{margin-top:26px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;position:relative;z-index:1}
+.ids a{color:#7E919E}
+.ids a:hover{color:var(--cyan)}
+.lang{margin-top:20px;font-size:12.5px;color:#7E919E;position:relative;z-index:1}
+.lang button{font:inherit;background:none;border:0;padding:0 5px;cursor:pointer;color:#7E919E}
+.lang button[aria-pressed=true]{color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--cyan)}
+
+/* ---------- main ---------- */
+main{padding:0 0 90px}
+.inner{max-width:820px;padding:0 56px}
+.hero{padding:84px 0 64px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);font-weight:600}
+.hero p.lede{font-family:var(--serif);font-size:clamp(27px,3.4vw,38px);line-height:1.28;margin:18px 0 0;letter-spacing:-.02em}
+.hero p.sub{color:var(--muted);margin:22px 0 0;max-width:62ch}
+
+section{padding:46px 0;border-top:1px solid var(--line)}
+.stitle{display:flex;align-items:baseline;gap:14px;margin-bottom:30px}
+.stitle h2{font-size:13px;font-family:var(--sans);font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.stitle span{flex:1;height:1px;background:var(--line)}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.card{background:var(--paper-2);border:1px solid var(--line);border-radius:4px;padding:22px 22px 20px;
+  position:relative;overflow:hidden;transition:transform .22s ease,box-shadow .22s ease,border-color .22s}
+.card::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--cyan);
+  transform:scaleY(0);transform-origin:top;transition:transform .28s ease}
+.card:hover{transform:translateY(-3px);box-shadow:0 12px 28px -18px rgba(11,22,32,.5);border-color:#D2CFC7}
+.card:hover::before{transform:scaleY(1)}
+.card .no{font-family:var(--serif);font-size:13px;color:var(--coral)}
+.card h3{font-size:20px;margin:6px 0 8px;line-height:1.25}
+.card p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.55}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.chips b{font-weight:400;font-size:12px;color:var(--deep);background:#EAF2F2;border-radius:99px;padding:3px 10px}
+
+/* now list */
+.now{display:grid;gap:2px}
+.now .row{display:grid;grid-template-columns:112px 1fr;gap:22px;padding:16px 0;border-bottom:1px solid var(--line)}
+.now .row:first-child{border-top:1px solid var(--line)}
+.now .when{font-size:12.5px;color:var(--muted);letter-spacing:.04em;padding-top:3px}
+.now h3{font-size:17.5px;font-family:var(--sans);font-weight:500;letter-spacing:0}
+.now p{margin:4px 0 0;font-size:14.5px;color:var(--muted)}
+
+/* pub teaser */
+.teaser{background:var(--ink-2);color:#DCE5EA;border-radius:5px;padding:30px 32px;position:relative;overflow:hidden}
+.teaser::after{content:"";position:absolute;width:300px;height:300px;right:-120px;bottom:-160px;
+  background:radial-gradient(circle,rgba(47,179,190,.25),transparent 65%)}
+.teaser .figs{display:flex;gap:34px;flex-wrap:wrap;position:relative;z-index:1}
+.teaser .figs div{display:flex;flex-direction:column}
+.teaser .n{font-family:var(--serif);font-size:34px;line-height:1;color:#fff}
+.teaser .l{font-size:12.5px;color:#8FA2AE;margin-top:5px}
+.teaser p{position:relative;z-index:1;margin:20px 0 0;font-size:14.5px;color:#A9BAC4;max-width:56ch}
+.btn{position:relative;z-index:1;display:inline-flex;align-items:center;gap:9px;margin-top:22px;
+  background:var(--cyan);color:#062229;font-weight:600;font-size:14.5px;padding:11px 20px;border-radius:3px;
+  transition:transform .18s,background .18s}
+.btn:hover{background:#4CCAD4;transform:translateX(3px)}
+
+.contact p{margin:0 0 6px}
+.contact .big{font-family:var(--serif);font-size:24px}
+footer{padding:26px 0 0;border-top:1px solid var(--line);font-size:12.5px;color:var(--muted);
+  display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+
+.reveal{opacity:0;transform:translateY(14px)}
+.reveal.in{opacity:1;transform:none;transition:opacity .55s ease,transform .55s ease}
+@media (prefers-reduced-motion:reduce){
+  .reveal,.reveal.in{opacity:1;transform:none;transition:none}
+  html{scroll-behavior:auto}
+  .card:hover,.btn:hover{transform:none}
 }
-a{color:var(--field);text-decoration:none;border-bottom:1px solid rgba(14,92,107,.3)}
-a:hover{border-bottom-color:var(--field)}
-a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--field);outline-offset:3px}
-h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.01em;margin:0}
-
-.wrap{max-width:1080px;margin:0 auto;padding:0 24px;
-  display:grid;grid-template-columns:250px 1fr;gap:64px;align-items:start}
-
-/* ---- left rail ---- */
-.rail{position:sticky;top:0;padding:56px 0 40px}
-.rail h1{font-size:30px;line-height:1.15}
-.rail .role{font-family:var(--serif);font-style:italic;font-size:17px;color:var(--ink-soft);margin-top:6px}
-.rail .place{font-size:14px;color:var(--ink-soft);margin-top:14px;line-height:1.5}
-.nav{margin-top:28px;padding-top:20px;border-top:1px solid var(--rule);display:flex;flex-direction:column;gap:7px}
-.nav a{color:var(--ink);border:0;font-size:15px;width:fit-content}
-.nav a:hover{color:var(--field)}
-.ids{margin-top:24px;padding-top:20px;border-top:1px solid var(--rule);
-  display:flex;flex-direction:column;gap:7px;font-size:14px}
-.ids a{border:0;color:var(--ink-soft)}
-.ids a:hover{color:var(--field)}
-.lang{margin-top:24px;font-size:13px;color:var(--ink-soft)}
-.lang button{font:inherit;background:none;border:0;padding:0 4px;cursor:pointer;color:var(--ink-soft);
-  border-bottom:1px solid transparent}
-.lang button[aria-pressed=true]{color:var(--ink);border-bottom-color:var(--field)}
-
-/* ---- main ---- */
-main{padding:56px 0 96px;max-width:70ch}
-section+section{margin-top:56px;padding-top:40px;border-top:1px solid var(--rule)}
-.lede{font-family:var(--serif);font-size:24px;line-height:1.45;margin:0}
-.lede+p{margin-top:20px;color:var(--ink-soft)}
-h2{font-size:15px;font-family:var(--sans);font-weight:600;color:var(--ink-soft);margin-bottom:20px}
-
-.focus{display:grid;gap:26px}
-.focus h3{font-size:20px}
-.focus p{margin:5px 0 0;color:var(--ink-soft);font-size:15px}
-
-/* ---- publications ---- */
-.pubhead{display:flex;flex-wrap:wrap;gap:12px;align-items:baseline;justify-content:space-between;margin-bottom:18px}
-.count{font-family:var(--serif);font-size:15px;color:var(--ink-soft)}
-.count b{color:var(--signal);font-weight:500}
-#q{font:inherit;font-size:14px;padding:8px 12px;width:230px;max-width:100%;
-  border:1px solid var(--rule);border-radius:2px;background:#fff;color:var(--ink)}
-.year{display:grid;grid-template-columns:52px 1fr;gap:20px;padding:18px 0;border-top:1px solid var(--rule)}
-.year:first-of-type{border-top:0}
-.year>span{font-family:var(--serif);font-size:17px;color:var(--ink-soft);padding-top:2px}
-.work{margin:0 0 14px}
-.work:last-child{margin-bottom:0}
-.work .t{display:block;color:var(--ink);border:0;font-size:15.5px;line-height:1.45}
-.work a.t:hover{color:var(--field)}
-.work .j{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--ink-soft)}
-.state{color:var(--ink-soft);font-size:15px}
-
-/* ---- researchgate ---- */
-.rg{background:var(--field-tint);border-radius:3px;padding:22px 24px;display:grid;gap:16px}
-.rg .figs{display:flex;gap:36px;flex-wrap:wrap}
-.rg .figs div{display:flex;flex-direction:column}
-.rg .n{font-family:var(--serif);font-size:30px;line-height:1}
-.rg .l{font-size:13px;color:var(--ink-soft);margin-top:4px}
-.rg p{margin:0;font-size:14.5px;color:var(--ink-soft)}
-.stamp{font-size:12.5px;color:var(--ink-soft)}
-
-footer{border-top:1px solid var(--rule);margin-top:56px;padding-top:20px;font-size:13px;color:var(--ink-soft)}
-
-@media (max-width:860px){
-  .wrap{grid-template-columns:1fr;gap:0}
-  .rail{position:static;padding:40px 0 0}
-  .nav{flex-direction:row;flex-wrap:wrap;gap:16px}
-  main{padding-top:36px}
-  .year{grid-template-columns:44px 1fr;gap:14px}
-}
-@media (prefers-reduced-motion:no-preference){
-  .state{transition:opacity .2s}
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .rail{position:static;height:auto;padding:34px 26px 28px}
+  .rail nav{margin-top:26px}
+  .rail nav a{border-bottom:0;padding:5px 0}
+  .rail nav{flex-direction:row;flex-wrap:wrap;gap:6px 18px;align-items:center}
+  .rail nav a.tab{margin-top:0}
+  .inner{padding:0 26px}
+  .hero{padding:46px 0 34px}
+  .cards{grid-template-columns:1fr}
+  .now .row{grid-template-columns:1fr;gap:4px}
 }
 </style>
 </head>
 <body>
-<div class="wrap">
+<div class="layout">
 
   <aside class="rail">
+    <svg class="mark" viewBox="0 0 40 40" aria-hidden="true">
+      <circle cx="20" cy="20" r="18" fill="none" stroke="#2FB3BE" stroke-width="1.2" opacity=".55"/>
+      <path d="M8 26c4-1.5 5-10 8-10s4 12 8 12 5-14 8-14" fill="none" stroke="#fff" stroke-width="1.6" stroke-linecap="round"/>
+    </svg>
     <h1>Semih Gülle</h1>
-    <div class="role" data-i18n="role">MD, Rheumatology</div>
-    <div class="place" data-i18n="place">Assistant Professor<br>Division of Rheumatology<br>Dokuz Eylül University School of Medicine<br>İzmir, Türkiye</div>
-
-    <nav class="nav">
-      <a href="#about" data-i18n="nav1">About</a>
-      <a href="#research" data-i18n="nav2">Research</a>
-      <a href="#publications" data-i18n="nav3">Publications</a>
-      <a href="#contact" data-i18n="nav4">Contact</a>
-    </nav>
-
-    <div class="ids" id="ids"></div>
-
+    <div class="role" id="r-role"></div>
+    <div class="place" id="r-place"></div>
+    <nav id="r-nav"></nav>
+    <div class="ids" id="r-ids"></div>
     <div class="lang">
       <button type="button" data-lang="en" aria-pressed="true">EN</button>·<button type="button" data-lang="tr" aria-pressed="false">TR</button>
     </div>
   </aside>
 
   <main>
-    <section id="about">
-      <p class="lede" data-i18n="lede">I am a rheumatologist in İzmir working on spondyloarthritis — how it behaves in real-world registries, and what happens in the tissue before it becomes visible in the clinic.</p>
-      <p data-i18n="about">Clinically I run a general academic rheumatology practice with a focus on axial spondyloarthritis, psoriatic arthritis and systemic sclerosis, including musculoskeletal ultrasound of peripheral joints and entheses. My research runs on two tracks: outcomes from the TURKBIO registry and the EuroSpA collaboration, and experimental work on fibrosis and enthesitis in animal models, carried out through the Department of Laboratory Animal Science.</p>
-    </section>
+    <div class="inner">
+      <header class="hero">
+        <div class="eyebrow" id="h-eyebrow"></div>
+        <p class="lede" id="h-lede"></p>
+        <p class="sub" id="h-sub"></p>
+      </header>
 
-    <section id="research">
-      <h2 data-i18n="h_research">Research</h2>
-      <div class="focus">
-        <div>
-          <h3 data-i18n="r1t">Axial spondyloarthritis and psoriatic arthritis</h3>
-          <p data-i18n="r1p">Treatment response, drug survival, switching and swapping of biologics in real-life cohorts, using TURKBIO and EuroSpA data.</p>
-        </div>
-        <div>
-          <h3 data-i18n="r2t">Ultrasound of the enthesis</h3>
-          <p data-i18n="r2p">Ongoing PhD work on high-resolution ultrasound in an experimental spondyloarthritis model, validated against histopathology.</p>
-        </div>
-        <div>
-          <h3 data-i18n="r3t">Fibrosis in systemic sclerosis</h3>
-          <p data-i18n="r3p">Skin and lung fibrosis in the bleomycin mouse model, including the effect of JAK1/2 inhibition.</p>
-        </div>
-        <div>
-          <h3 data-i18n="r4t">Autoinflammatory diseases</h3>
-          <p data-i18n="r4p">Clinical phenotypes and long-term outcomes of monogenic and undifferentiated autoinflammatory syndromes.</p>
-        </div>
-      </div>
-    </section>
+      <section id="areas" class="reveal">
+        <div class="stitle"><h2 id="t-areas"></h2><span></span></div>
+        <div class="cards" id="c-areas"></div>
+      </section>
 
-    <section id="publications">
-      <div class="pubhead">
-        <h2 style="margin:0" data-i18n="h_pubs">Publications</h2>
-        <input id="q" type="search" placeholder="Filter by title or journal" aria-label="Filter publications">
-      </div>
-      <div class="count" id="count"></div>
-      <div id="pubs"><p class="state" data-i18n="loading">Loading publications from ORCID…</p></div>
-    </section>
+      <section id="now" class="reveal">
+        <div class="stitle"><h2 id="t-now"></h2><span></span></div>
+        <div class="now" id="c-now"></div>
+      </section>
 
-    <section id="metrics">
-      <h2 data-i18n="h_rg">Citations and profiles</h2>
-      <div class="rg">
-        <div class="figs">
-          <div><span class="n" id="m-wos"></span><span class="l" data-i18n="m_wos">citations, Web of Science (h 5)</span></div>
-          <div><span class="n" id="m-scopus"></span><span class="l" data-i18n="m_scopus">citations, Scopus (h 4)</span></div>
-          <div><span class="n" id="m-scholar"></span><span class="l" data-i18n="m_scholar">citations, Google Scholar (h 5)</span></div>
+      <section id="publications" class="reveal">
+        <div class="stitle"><h2 id="t-pubs"></h2><span></span></div>
+        <div class="teaser">
+          <div class="figs">
+            <div><span class="n" id="m1"></span><span class="l" id="l1"></span></div>
+            <div><span class="n" id="m2"></span><span class="l" id="l2"></span></div>
+            <div><span class="n" id="m3"></span><span class="l" id="l3"></span></div>
+            <div><span class="n" id="m4"></span><span class="l" id="l4"></span></div>
+          </div>
+          <p id="p-teaser"></p>
+          <a class="btn" href="publications.html"><span id="p-btn"></span> →</a>
         </div>
-        <p data-i18n="rg_text">The list above covers journal articles. Alongside these there are 58 conference abstracts, mostly EULAR and national rheumatology congress presentations, and two book chapters — on systemic sclerosis and on certolizumab pegol in axial spondyloarthritis. Full texts and abstracts are collected on ResearchGate; the complete institutional record, including projects and teaching, is on AVESİS.</p>
-        <p class="stamp"><a id="rg-link" href="#">ResearchGate</a> · <a id="av-link" href="#">AVESİS</a> · <span data-i18n="rg_stamp">figures updated</span> <span id="rg-date"></span></p>
-      </div>
-    </section>
+      </section>
 
-    <section id="contact">
-      <h2 data-i18n="h_contact">Contact</h2>
-      <p><a id="mail" href="#"></a><br>
-      <span data-i18n="addr">Division of Rheumatology, Dokuz Eylül University School of Medicine, İnciraltı, 35340 İzmir, Türkiye</span></p>
-      <p class="stamp" data-i18n="collab">Open to collaboration on spondyloarthritis cohorts and preclinical imaging studies.</p>
-    </section>
+      <section id="contact" class="contact reveal">
+        <div class="stitle"><h2 id="t-contact"></h2><span></span></div>
+        <p class="big"><a id="mail" href="#"></a></p>
+        <p id="p-addr" style="color:var(--muted)"></p>
+        <p id="p-collab" style="color:var(--muted);margin-top:14px"></p>
+      </section>
 
-    <footer>
-      <span data-i18n="foot">Publication list is pulled live from ORCID.</span>
-      <span id="foot-year"></span>
-    </footer>
+      <footer>
+        <span id="f-note"></span>
+        <span id="f-year"></span>
+      </footer>
+    </div>
   </main>
 </div>
 
 <script>
-/* ---------------- language ---------------- */
-const TR = {
-  role:"Uzm. Dr., Romatoloji",
-  place:"Dr. Öğr. Üyesi<br>Romatoloji Bilim Dalı<br>Dokuz Eylül Üniversitesi Tıp Fakültesi<br>İzmir, Türkiye",
-  nav1:"Hakkımda", nav2:"Araştırma", nav3:"Yayınlar", nav4:"İletişim",
-  lede:"İzmir'de çalışan bir romatoloğum. İlgi alanım spondiloartrit: gerçek yaşam kayıt sistemlerinde nasıl seyrettiği ve klinikte görünür hâle gelmeden önce dokuda ne olduğu.",
-  about:"Klinikte aksiyel spondiloartrit, psoriatik artrit ve sistemik skleroz ağırlıklı genel bir akademik romatoloji pratiği yürütüyorum; periferik eklem ve entez ultrasonografisi yapıyorum. Araştırmalarım iki hat üzerinde ilerliyor: TURKBIO kayıt sistemi ve EuroSpA iş birliğinden elde edilen gerçek yaşam sonuçları ile Laboratuar Hayvanları Bilimi Anabilim Dalı bünyesinde yürüttüğüm fibrozis ve entezit deney modelleri.",
-  h_research:"Araştırma",
-  r1t:"Aksiyel spondiloartrit ve psoriatik artrit",
-  r1p:"TURKBIO ve EuroSpA verileriyle gerçek yaşam kohortlarında tedavi yanıtı, ilaç sürvisi, biyolojik ajan değişimleri.",
-  r2t:"Entez ultrasonografisi",
-  r2p:"Deneysel spondiloartrit modelinde yüksek çözünürlüklü ultrasonografi ve histopatolojik doğrulaması üzerine süren doktora çalışması.",
-  r3t:"Sistemik sklerozda fibrozis",
-  r3p:"Bleomisin fare modelinde cilt ve akciğer fibrozisi; JAK1/2 inhibisyonunun etkisi.",
-  r4t:"Otoinflamatuvar hastalıklar",
-  r4p:"Monogenik ve sınıflandırılamayan otoinflamatuvar sendromlarda klinik fenotip ve uzun dönem sonuçlar.",
-  h_pubs:"Yayınlar", loading:"Yayınlar ORCID'den yükleniyor…",
-  h_rg:"Atıflar ve profiller",
-  m_wos:"atıf, Web of Science (h 5)", m_scopus:"atıf, Scopus (h 4)", m_scholar:"atıf, Google Scholar (h 5)",
-  rg_text:"Yukarıdaki liste makaleleri kapsıyor. Bunların yanında çoğu EULAR ve ulusal romatoloji kongrelerinde sunulmuş 58 bildiri ile iki kitap bölümü var: sistemik skleroz ve aksiyel spondiloartritte sertolizumab pegol. Tam metinler ve bildiriler ResearchGate'te; projeler ve eğitim faaliyetleri dâhil kurumsal kayıt AVESİS'te.",
-  rg_stamp:"veriler güncellendi:",
-  h_contact:"İletişim",
+const T = {
+en:{
+  role:"MD · Rheumatology",
+  place:"Assistant Professor<br>Division of Rheumatology<br>Dokuz Eylül University School of Medicine<br>İzmir, Türkiye",
+  nav:["About","Expertise","Currently","Contact"], tab:"Publications",
+  ids:{orcid:"ORCID",scholar:"Scholar",scopus:"Scopus",wos:"Web of Science",rg:"ResearchGate",av:"AVESİS",mail:"Email"},
+  eyebrow:"Rheumatology · İzmir",
+  lede:"Spondyloarthritis, seen from two directions: how it behaves in thousands of real patients, and what happens in the tissue before anyone can see it.",
+  sub:"I treat inflammatory rheumatic disease at Dokuz Eylül University and run research on both sides of that gap — registry cohorts on one side, rodent models and high-resolution ultrasound on the other.",
+  t_areas:"Expertise", t_now:"Currently", t_pubs:"Publications", t_contact:"Contact",
+  areas:[
+    ["Axial spondyloarthritis","Real-world treatment outcomes: who responds, who stays on drug, and what to do after the first biologic fails.",["TURKBIO","EuroSpA","drug survival","early disease","IL-17 / TNF"]],
+    ["Psoriatic arthritis","Phenotype-driven treatment across skin, joint, enthesis and axial involvement, and how treat-to-target holds up in daily practice.",["enthesitis","MDA","switch / swap","ultrasound"]],
+    ["Autoinflammatory disease","FMF and undifferentiated autoinflammatory syndromes in adults — colchicine resistance, amyloidosis risk, IL-1 blockade.",["FMF","colchicine resistance","AA amyloidosis","anti-IL-1"]],
+    ["Systemic sclerosis and fibrosis","Skin and lung fibrosis from clinic to model, including JAK1/2 inhibition in experimental disease.",["baricitinib","ILD","bleomycin model"]],
+    ["Musculoskeletal ultrasound","Peripheral joint and enthesis imaging in clinic, and high-resolution ultrasound validated against histopathology in an experimental model.",["enthesis","Doppler","histopathological validation"]],
+    ["Laboratory animal science","Designing rodent models of rheumatic disease — model choice, welfare, 3R, and getting findings back to the clinic.",["3R","rodent models","preclinical design"]]
+  ],
+  now:[
+    ["PhD, in progress","High-resolution ultrasound of the enthesis","Ultrasound findings in an experimental spondyloarthritis model, validated against histopathology — Department of Laboratory Animal Science."],
+    ["Cohort study","Window of opportunity in axSpA","Whether symptom duration before the first biologic predicts how well patients respond, in a biologic-treated axSpA cohort."],
+    ["Database","Biologic switching and swapping","A prospective record of why patients change biologics in spondyloarthritis, and what happens after each change."],
+    ["Book","Experimental animal models in rheumatology","A Turkish-language reference on animal models used in rheumatology research."]
+  ],
+  labels:["citations, Web of Science","citations, Scopus","citations, Scholar","h-index"],
+  teaser:"Journal articles are pulled live from ORCID. Alongside them there are 58 conference abstracts — mostly EULAR and national congress presentations — and two book chapters, on systemic sclerosis and on certolizumab pegol in axial spondyloarthritis.",
+  btn:"See all publications",
+  addr:"Division of Rheumatology, Dokuz Eylül University School of Medicine, İnciraltı, 35340 İzmir, Türkiye",
+  collab:"Open to collaboration on spondyloarthritis cohorts and preclinical imaging studies.",
+  note:"Publication data from ORCID · citation figures updated " + CONFIG.metrics.updated
+},
+tr:{
+  role:"Uzm. Dr. · Romatoloji",
+  place:"Dr. Öğr. Üyesi<br>Romatoloji Bilim Dalı<br>Dokuz Eylül Üniversitesi Tıp Fakültesi<br>İzmir",
+  nav:["Hakkımda","Uzmanlık","Şu sıralar","İletişim"], tab:"Yayınlar",
+  ids:{orcid:"ORCID",scholar:"Scholar",scopus:"Scopus",wos:"Web of Science",rg:"ResearchGate",av:"AVESİS",mail:"E-posta"},
+  eyebrow:"Romatoloji · İzmir",
+  lede:"Spondiloartrite iki yönden bakıyorum: binlerce gerçek hastada nasıl seyrettiği ve henüz kimse göremezken dokuda ne olduğu.",
+  sub:"Dokuz Eylül Üniversitesi'nde inflamatuvar romatizmal hastalıkların tedavisiyle uğraşıyor, bu iki uç arasında araştırma yürütüyorum: bir yanda kayıt sistemi kohortları, diğer yanda kemirgen modelleri ve yüksek çözünürlüklü ultrasonografi.",
+  t_areas:"Uzmanlık alanları", t_now:"Şu sıralar", t_pubs:"Yayınlar", t_contact:"İletişim",
+  areas:[
+    ["Aksiyel spondiloartrit","Gerçek yaşamda tedavi sonuçları: kim yanıt veriyor, kim ilaçta kalıyor, ilk biyolojik başarısız olunca ne yapmalı.",["TURKBIO","EuroSpA","ilaç sürvisi","erken dönem","IL-17 / TNF"]],
+    ["Psoriatik artrit","Deri, eklem, entez ve aksiyel tutuluma göre fenotipe dayalı tedavi seçimi; günlük pratikte hedefe yönelik tedavinin karşılığı.",["entezit","MDA","switch / swap","ultrasonografi"]],
+    ["Otoinflamatuvar hastalıklar","Erişkinde AAA ve sınıflandırılamayan otoinflamatuvar sendromlar — kolşisin direnci, amiloidoz riski, IL-1 blokajı.",["AAA","kolşisin direnci","AA amiloidoz","anti-IL-1"]],
+    ["Sistemik skleroz ve fibrozis","Klinikten modele cilt ve akciğer fibrozisi; deneysel hastalıkta JAK1/2 inhibisyonu.",["barisitinib","İAH","bleomisin modeli"]],
+    ["Kas-iskelet ultrasonografisi","Klinikte periferik eklem ve entez görüntülemesi; deneysel modelde histopatolojiyle doğrulanan yüksek çözünürlüklü ultrasonografi.",["entez","Doppler","histopatolojik doğrulama"]],
+    ["Deney hayvanları bilimi","Romatizmal hastalıkların kemirgen modellerinin tasarımı — model seçimi, refah, 3R ilkesi ve bulguların kliniğe taşınması.",["3R","kemirgen modeller","preklinik tasarım"]]
+  ],
+  now:[
+    ["Doktora, sürüyor","Entezin yüksek çözünürlüklü ultrasonografisi","Deneysel spondiloartrit modelinde ultrasonografi bulguları ve histopatolojik doğrulaması — Laboratuar Hayvanları Bilimi Anabilim Dalı."],
+    ["Kohort çalışması","AksSpA'da fırsat penceresi","Biyolojik tedavi alan aksSpA kohortunda, ilk biyolojik öncesi semptom süresinin tedavi yanıtını öngörüp öngörmediği."],
+    ["Veri tabanı","Biyolojik ajan değişimleri","Spondiloartritte hastaların biyolojik ajanı neden değiştirdiğini ve her değişimden sonra ne olduğunu izleyen prospektif kayıt."],
+    ["Kitap","Romatolojide deneysel hayvan modelleri","Romatoloji araştırmalarında kullanılan hayvan modelleri üzerine Türkçe başvuru kaynağı."]
+  ],
+  labels:["atıf, Web of Science","atıf, Scopus","atıf, Scholar","h-indeksi"],
+  teaser:"Makaleler ORCID'den canlı olarak çekiliyor. Bunların yanında çoğu EULAR ve ulusal kongrelerde sunulmuş 58 bildiri ile iki kitap bölümü var: sistemik skleroz ve aksiyel spondiloartritte sertolizumab pegol.",
+  btn:"Tüm yayınlar",
   addr:"Dokuz Eylül Üniversitesi Tıp Fakültesi, Romatoloji Bilim Dalı, İnciraltı, 35340 İzmir",
   collab:"Spondiloartrit kohortları ve preklinik görüntüleme çalışmalarında iş birliğine açığım.",
-  foot:"Yayın listesi ORCID'den canlı olarak çekilmektedir.",
-  ids_orcid:"ORCID", ids_rg:"ResearchGate", ids_av:"AVESİS", ids_gs:"Google Scholar", ids_mail:"E-posta",
-  rg_link:"ResearchGate profilini aç",
-  empty:"Bu aramayla eşleşen yayın yok.",
-  error:"Yayınlar şu anda yüklenemedi. Tam liste ORCID profilinde:"
-};
-const EN = {};
-document.querySelectorAll("[data-i18n]").forEach(el => EN[el.dataset.i18n] = el.innerHTML);
-Object.assign(EN, {
-  ids_orcid:"ORCID", ids_rg:"ResearchGate", ids_av:"AVESIS", ids_gs:"Google Scholar", ids_mail:"Email",
-  rg_link:"View profile on ResearchGate",
-  empty:"No publication matches that filter.",
-  error:"Publications could not be loaded right now. The full list is on ORCID:"
-});
-let L = EN;
+  note:"Yayın verisi ORCID'den · atıf sayıları " + CONFIG.metrics.updated + " itibarıyla"
+}};
 
-function setLang(code){
-  L = code === "tr" ? TR : EN;
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+
+function paint(code){
+  const d = T[code];
   document.documentElement.lang = code;
-  document.querySelectorAll("[data-i18n]").forEach(el=>{
-    const v = L[el.dataset.i18n] ?? EN[el.dataset.i18n];
-    if (v !== undefined) el.innerHTML = v;
-  });
+  localStorage.setItem("lang", code);
+
+  $("r-role").textContent = d.role;
+  $("r-place").innerHTML = d.place;
+
+  const ids = ["about","areas","now","contact"];
+  $("r-nav").innerHTML =
+    d.nav.map((t,i)=>`<a href="#${i===0?"top":ids[i]}">${esc(t)}</a>`).join("") +
+    `<a class="tab" href="publications.html">${esc(d.tab)} <span aria-hidden="true">→</span></a>`;
+
+  $("r-ids").innerHTML = [
+    ["https://orcid.org/"+CONFIG.orcid, d.ids.orcid],
+    [CONFIG.scholar, d.ids.scholar],[CONFIG.scopus, d.ids.scopus],[CONFIG.wos, d.ids.wos],
+    [CONFIG.researchgate, d.ids.rg],[CONFIG.avesis, d.ids.av],
+    ["mailto:"+CONFIG.email, d.ids.mail]
+  ].map(([h,t])=>`<a href="${h}"${h.startsWith("http")?' target="_blank" rel="noopener"':''}>${esc(t)}</a>`).join("");
+
+  $("h-eyebrow").textContent = d.eyebrow;
+  $("h-lede").textContent = d.lede;
+  $("h-sub").textContent = d.sub;
+  $("t-areas").textContent = d.t_areas;
+  $("t-now").textContent = d.t_now;
+  $("t-pubs").textContent = d.t_pubs;
+  $("t-contact").textContent = d.t_contact;
+
+  $("c-areas").innerHTML = d.areas.map(([t,p,chips],i)=>
+    `<article class="card"><div class="no">${String(i+1).padStart(2,"0")}</div>
+     <h3>${esc(t)}</h3><p>${esc(p)}</p>
+     <div class="chips">${chips.map(c=>`<b>${esc(c)}</b>`).join("")}</div></article>`).join("");
+
+  $("c-now").innerHTML = d.now.map(([w,t,p])=>
+    `<div class="row"><div class="when">${esc(w)}</div>
+     <div><h3>${esc(t)}</h3><p>${esc(p)}</p></div></div>`).join("");
+
+  const vals = [CONFIG.metrics.wos, CONFIG.metrics.scopus, CONFIG.metrics.scholar, CONFIG.metrics.h];
+  vals.forEach((v,i)=>{ $("m"+(i+1)).textContent = v; $("l"+(i+1)).textContent = d.labels[i]; });
+  $("p-teaser").textContent = d.teaser;
+  $("p-btn").textContent = d.btn;
+
+  const m = $("mail"); m.href = "mailto:"+CONFIG.email; m.textContent = CONFIG.email;
+  $("p-addr").textContent = d.addr;
+  $("p-collab").textContent = d.collab;
+  $("f-note").textContent = d.note;
+  $("f-year").textContent = "© " + new Date().getFullYear() + " Semih Gülle";
+
   document.querySelectorAll(".lang button").forEach(b=>
-    b.setAttribute("aria-pressed", String(b.dataset.lang === code)));
-  document.getElementById("q").placeholder = code === "tr" ? "Başlık veya dergide ara" : "Filter by title or journal";
-  document.getElementById("rg-link").textContent = L.rg_link;
-  buildIds();
-  render();
+    b.setAttribute("aria-pressed", String(b.dataset.lang===code)));
 }
 document.querySelectorAll(".lang button").forEach(b=>
-  b.addEventListener("click", ()=> setLang(b.dataset.lang)));
+  b.addEventListener("click", ()=>paint(b.dataset.lang)));
 
-/* ---------------- static links ---------------- */
-function buildIds(){
-  const items = [
-    ["https://orcid.org/" + CONFIG.orcid, L.ids_orcid],
-    CONFIG.scholar ? [CONFIG.scholar, L.ids_gs] : null,
-    CONFIG.scopus ? [CONFIG.scopus, "Scopus"] : null,
-    CONFIG.wos ? [CONFIG.wos, "Web of Science"] : null,
-    [CONFIG.researchgate, L.ids_rg],
-    [CONFIG.avesis, L.ids_av],
-    ["mailto:" + CONFIG.email, L.ids_mail]
-  ].filter(Boolean);
-  document.getElementById("ids").innerHTML =
-    items.map(([h,t]) => `<a href="${h}"${h.startsWith("http")?' target="_blank" rel="noopener"':''}>${t}</a>`).join("");
-}
-document.getElementById("m-wos").textContent     = CONFIG.metrics.wos.citations;
-document.getElementById("m-scopus").textContent  = CONFIG.metrics.scopus.citations;
-document.getElementById("m-scholar").textContent = CONFIG.metrics.scholar.citations;
-document.getElementById("rg-date").textContent   = CONFIG.metrics.updated;
-document.getElementById("rg-link").href = CONFIG.researchgate;
-document.getElementById("av-link").href = CONFIG.avesis;
-const mail = document.getElementById("mail");
-mail.href = "mailto:" + CONFIG.email; mail.textContent = CONFIG.email;
-document.getElementById("foot-year").textContent = "© " + new Date().getFullYear() + " Semih Gülle";
+const saved = localStorage.getItem("lang");
+paint(saved || ((navigator.language||"").startsWith("tr") ? "tr" : "en"));
 
-/* ---------------- ORCID ---------------- */
-let works = [], failed = false;
-
-function esc(s){ return String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])); }
-
-async function loadWorks(){
-  const url = `https://pub.orcid.org/v3.0/${CONFIG.orcid}/works`;
-  const res = await fetch(url, { headers: { Accept: "application/json" } });
-  if (!res.ok) throw new Error(res.status);
-  const data = await res.json();
-  works = (data.group || []).map(g => {
-    const w = g["work-summary"][0];
-    const doi = (g["external-ids"]?.["external-id"] || [])
-      .find(x => x["external-id-type"] === "doi");
-    return {
-      title: w.title?.title?.value || "Untitled",
-      journal: w["journal-title"]?.value || "",
-      year: w["publication-date"]?.year?.value || "",
-      link: doi ? "https://doi.org/" + doi["external-id-value"] : (w.url?.value || "")
-    };
-  }).sort((a,b) => (b.year||0) - (a.year||0) || a.title.localeCompare(b.title));
-}
-
-function render(){
-  const box = document.getElementById("pubs");
-  const countEl = document.getElementById("count");
-  if (failed){
-    countEl.textContent = "";
-    box.innerHTML = `<p class="state">${L.error}
-      <a href="https://orcid.org/${CONFIG.orcid}" target="_blank" rel="noopener">orcid.org/${CONFIG.orcid}</a></p>`;
-    return;
-  }
-  if (!works.length){ return; }
-
-  const q = document.getElementById("q").value.trim().toLowerCase();
-  const list = q ? works.filter(w => (w.title + " " + w.journal).toLowerCase().includes(q)) : works;
-
-  countEl.innerHTML = `<b>${list.length}</b> ${L === TR ? "kayıt" : (list.length === 1 ? "record" : "records")}` +
-    (q ? ` / ${works.length}` : "");
-
-  if (!list.length){ box.innerHTML = `<p class="state">${L.empty}</p>`; return; }
-
-  const byYear = {};
-  list.forEach(w => (byYear[w.year || "—"] ||= []).push(w));
-  box.innerHTML = Object.keys(byYear)
-    .sort((a,b) => (b === "—" ? -1 : a === "—" ? 1 : b - a))
-    .map(y => `<div class="year"><span>${esc(y)}</span><div>` +
-      byYear[y].map(w => `<p class="work">` +
-        (w.link ? `<a class="t" href="${esc(w.link)}" target="_blank" rel="noopener">${esc(w.title)}</a>`
-                : `<span class="t">${esc(w.title)}</span>`) +
-        (w.journal ? `<span class="j">${esc(w.journal)}</span>` : "") +
-      `</p>`).join("") +
-    `</div></div>`).join("");
-}
-
-document.getElementById("q").addEventListener("input", render);
-
-loadWorks().then(render).catch(() => { failed = true; render(); });
+const io = new IntersectionObserver(es=>es.forEach(e=>{
+  if(e.isIntersecting){ e.target.classList.add("in"); io.unobserve(e.target); }
+}),{rootMargin:"-40px"});
+document.querySelectorAll(".reveal").forEach(el=>io.observe(el));
 </script>
 </body>
 </html>

@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Publications — Semih Gülle, MD</title>
+<meta name="description" content="Publication list of Semih Gülle, MD, pulled live from ORCID.">
+
+<script>
+const CONFIG = {
+  orcid: "0000-0001-8679-2130",
+  researchgate: "https://www.researchgate.net/profile/Semih-Guelle",
+  avesis: "https://avesis.deu.edu.tr/semih.gulle",
+  scholar: "https://scholar.google.com.tr/citations?user=GEpPZS0AAAAJ",
+  scopus: "https://www.scopus.com/authid/detail.uri?authorId=56597947000",
+  wos: "https://www.webofscience.com/wos/author/record/QPA-3214-2026",
+  email: "semih.gulle@deu.edu.tr",
+  metrics: { wos: 66, scopus: 52, scholar: 94, h: 5, updated: "09.2026" }
+};
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --ink:#0B1620;--paper:#F6F5F2;--paper-2:#fff;--text:#17242F;--muted:#5C6B77;
+  --line:#E2E0DA;--cyan:#2FB3BE;--deep:#0D6874;--coral:#D9613F;
+  --serif:"Newsreader",Georgia,serif;--sans:"IBM Plex Sans",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--text);font-family:var(--sans);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:400;letter-spacing:-.015em;margin:0}
+a{color:var(--deep);text-decoration:none}
+a:focus-visible,button:focus-visible,input:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:2px}
+
+.layout{display:grid;grid-template-columns:296px 1fr;min-height:100vh}
+.rail{background:var(--ink);color:#DCE5EA;position:sticky;top:0;height:100vh;padding:44px 34px;
+  display:flex;flex-direction:column;overflow:hidden}
+.rail::after{content:"";position:absolute;width:340px;height:340px;right:-150px;top:-120px;
+  background:radial-gradient(circle,rgba(47,179,190,.30),transparent 65%);pointer-events:none}
+.back{color:#8FA2AE;font-size:13.5px;display:inline-block;margin-bottom:22px;position:relative;z-index:1}
+.back:hover{color:var(--cyan)}
+.rail h1{color:#fff;font-size:29px;line-height:1.12}
+.rail .role{font-family:var(--serif);font-style:italic;font-size:16px;color:var(--cyan);margin-top:8px}
+.rail .place{font-size:13.5px;color:#8FA2AE;margin-top:16px;line-height:1.55}
+.ids{margin-top:auto;padding-top:28px;display:flex;flex-wrap:wrap;gap:6px 14px;font-size:12.5px;position:relative;z-index:1}
+.ids a{color:#7E919E}
+.ids a:hover{color:var(--cyan)}
+.lang{margin-top:20px;font-size:12.5px;color:#7E919E;position:relative;z-index:1}
+.lang button{font:inherit;background:none;border:0;padding:0 5px;cursor:pointer;color:#7E919E}
+.lang button[aria-pressed=true]{color:#fff;text-decoration:underline;text-underline-offset:4px;text-decoration-color:var(--cyan)}
+
+main{padding:70px 56px 90px;max-width:900px}
+.eyebrow{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--coral);font-weight:600}
+main>h2{font-size:clamp(30px,3.6vw,42px);margin:12px 0 0;letter-spacing:-.02em}
+.intro{color:var(--muted);margin:16px 0 0;max-width:60ch;font-size:15px}
+
+.bar{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;
+  margin:34px 0 0;padding:16px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+#q{font:inherit;font-size:14px;padding:9px 13px;width:270px;max-width:100%;background:var(--paper-2);
+  border:1px solid var(--line);border-radius:3px;color:var(--text)}
+.count{font-family:var(--serif);font-size:15px;color:var(--muted)}
+.count b{color:var(--coral);font-weight:400;font-size:19px}
+
+.year{display:grid;grid-template-columns:70px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--line)}
+.year>span{font-family:var(--serif);font-size:22px;color:var(--coral);line-height:1.1}
+.work{margin:0 0 16px;padding-left:14px;border-left:2px solid transparent;transition:border-color .2s,padding-left .2s}
+.work:last-child{margin-bottom:0}
+.work:hover{border-left-color:var(--cyan);padding-left:18px}
+.work .t{display:block;color:var(--text);font-size:15.5px;line-height:1.45}
+.work a.t:hover{color:var(--deep)}
+.work .j{font-family:var(--serif);font-style:italic;font-size:14px;color:var(--muted)}
+.state{color:var(--muted);font-size:15px;padding:26px 0}
+.foot{margin-top:34px;font-size:14px;color:var(--muted);max-width:62ch}
+
+@media (max-width:900px){
+  .layout{grid-template-columns:1fr}
+  .rail{position:static;height:auto;padding:30px 26px 26px}
+  .ids{margin-top:24px}
+  main{padding:36px 26px 70px}
+  .year{grid-template-columns:56px 1fr;gap:16px}
+}
+@media (prefers-reduced-motion:reduce){.work:hover{padding-left:14px}}
+</style>
+</head>
+<body>
+<div class="layout">
+  <aside class="rail">
+    <a class="back" href="index.html" id="back"></a>
+    <h1>Semih Gülle</h1>
+    <div class="role" id="r-role"></div>
+    <div class="place" id="r-place"></div>
+    <div class="ids" id="r-ids"></div>
+    <div class="lang">
+      <button type="button" data-lang="en" aria-pressed="true">EN</button>·<button type="button" data-lang="tr" aria-pressed="false">TR</button>
+    </div>
+  </aside>
+
+  <main>
+    <div class="eyebrow" id="eyebrow"></div>
+    <h2 id="title"></h2>
+    <p class="intro" id="intro"></p>
+
+    <div class="bar">
+      <div class="count" id="count"></div>
+      <input id="q" type="search" aria-label="filter">
+    </div>
+
+    <div id="pubs"><p class="state" id="state"></p></div>
+    <p class="foot" id="foot"></p>
+  </main>
+</div>
+
+<script>
+const T = {
+en:{
+  role:"MD · Rheumatology",
+  place:"Division of Rheumatology<br>Dokuz Eylül University School of Medicine<br>İzmir, Türkiye",
+  back:"← Home", eyebrow:"Peer-reviewed work", title:"Publications",
+  intro:"Journal articles, pulled live from ORCID each time this page loads. Titles link to the DOI where one is registered.",
+  ph:"Filter by title or journal", rec:"records", loading:"Loading from ORCID…",
+  empty:"No publication matches that filter.",
+  error:"The list could not be loaded right now. Full record on ORCID:",
+  foot:"Not listed here: 58 conference abstracts, mostly EULAR and national congress presentations, and two book chapters — on systemic sclerosis and on certolizumab pegol in axial spondyloarthritis. These are collected on ResearchGate and AVESİS.",
+  ids:{orcid:"ORCID",scholar:"Scholar",scopus:"Scopus",wos:"Web of Science",rg:"ResearchGate",av:"AVESİS",mail:"Email"}
+},
+tr:{
+  role:"Uzm. Dr. · Romatoloji",
+  place:"Romatoloji Bilim Dalı<br>Dokuz Eylül Üniversitesi Tıp Fakültesi<br>İzmir",
+  back:"← Ana sayfa", eyebrow:"Hakemli çalışmalar", title:"Yayınlar",
+  intro:"Makaleler, sayfa her açıldığında ORCID'den canlı olarak çekiliyor. Başlıklar, kayıtlı olduğu durumda DOI adresine bağlanıyor.",
+  ph:"Başlık veya dergide ara", rec:"kayıt", loading:"ORCID'den yükleniyor…",
+  empty:"Bu aramayla eşleşen yayın yok.",
+  error:"Liste şu anda yüklenemedi. Tam kayıt ORCID'de:",
+  foot:"Burada yer almayanlar: çoğu EULAR ve ulusal kongrelerde sunulmuş 58 bildiri ile iki kitap bölümü (sistemik skleroz; aksiyel spondiloartritte sertolizumab pegol). Bunlar ResearchGate ve AVESİS'te toplu hâlde bulunuyor.",
+  ids:{orcid:"ORCID",scholar:"Scholar",scopus:"Scopus",wos:"Web of Science",rg:"ResearchGate",av:"AVESİS",mail:"E-posta"}
+}};
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let L = T.en, works = [], failed = false, loaded = false;
+
+function paint(code){
+  L = T[code];
+  document.documentElement.lang = code;
+  localStorage.setItem("lang", code);
+  $("back").textContent = L.back;
+  $("r-role").textContent = L.role;
+  $("r-place").innerHTML = L.place;
+  $("eyebrow").textContent = L.eyebrow;
+  $("title").textContent = L.title;
+  $("intro").textContent = L.intro;
+  $("q").placeholder = L.ph;
+  $("foot").textContent = L.foot;
+  $("r-ids").innerHTML = [
+    ["https://orcid.org/"+CONFIG.orcid, L.ids.orcid],
+    [CONFIG.scholar, L.ids.scholar],[CONFIG.scopus, L.ids.scopus],[CONFIG.wos, L.ids.wos],
+    [CONFIG.researchgate, L.ids.rg],[CONFIG.avesis, L.ids.av],
+    ["mailto:"+CONFIG.email, L.ids.mail]
+  ].map(([h,t])=>`<a href="${h}"${h.startsWith("http")?' target="_blank" rel="noopener"':''}>${esc(t)}</a>`).join("");
+  document.querySelectorAll(".lang button").forEach(b=>
+    b.setAttribute("aria-pressed", String(b.dataset.lang===code)));
+  render();
+}
+document.querySelectorAll(".lang button").forEach(b=>
+  b.addEventListener("click", ()=>paint(b.dataset.lang)));
+
+async function load(){
+  const res = await fetch(`https://pub.orcid.org/v3.0/${CONFIG.orcid}/works`, {headers:{Accept:"application/json"}});
+  if(!res.ok) throw new Error(res.status);
+  const data = await res.json();
+  works = (data.group||[]).map(g=>{
+    const w = g["work-summary"][0];
+    const doi = (g["external-ids"]?.["external-id"]||[]).find(x=>x["external-id-type"]==="doi");
+    return {
+      title: w.title?.title?.value || "—",
+      journal: w["journal-title"]?.value || "",
+      year: w["publication-date"]?.year?.value || "",
+      link: doi ? "https://doi.org/"+doi["external-id-value"] : (w.url?.value || "")
+    };
+  }).sort((a,b)=>(b.year||0)-(a.year||0) || a.title.localeCompare(b.title));
+  loaded = true;
+}
+
+function render(){
+  const box = $("pubs"), cnt = $("count");
+  if(failed){
+    cnt.textContent = "";
+    box.innerHTML = `<p class="state">${L.error}
+      <a href="https://orcid.org/${CONFIG.orcid}" target="_blank" rel="noopener">orcid.org/${CONFIG.orcid}</a></p>`;
+    return;
+  }
+  if(!loaded){ box.innerHTML = `<p class="state">${L.loading}</p>`; return; }
+
+  const q = $("q").value.trim().toLowerCase();
+  const list = q ? works.filter(w=>(w.title+" "+w.journal).toLowerCase().includes(q)) : works;
+  cnt.innerHTML = `<b>${list.length}</b> ${L.rec}` + (q ? ` / ${works.length}` : "");
+  if(!list.length){ box.innerHTML = `<p class="state">${L.empty}</p>`; return; }
+
+  const by = {};
+  list.forEach(w=>(by[w.year||"—"] ||= []).push(w));
+  box.innerHTML = Object.keys(by)
+    .sort((a,b)=> a==="—" ? 1 : b==="—" ? -1 : b-a)
+    .map(y=>`<div class="year"><span>${esc(y)}</span><div>`+
+      by[y].map(w=>`<p class="work">`+
+        (w.link ? `<a class="t" href="${esc(w.link)}" target="_blank" rel="noopener">${esc(w.title)}</a>`
+                : `<span class="t">${esc(w.title)}</span>`)+
+        (w.journal ? `<span class="j">${esc(w.journal)}</span>` : "")+
+      `</p>`).join("")+`</div></div>`).join("");
+}
+
+$("q").addEventListener("input", render);
+const saved = localStorage.getItem("lang");
+paint(saved || ((navigator.language||"").startsWith("tr") ? "tr" : "en"));
+load().then(render).catch(()=>{ failed = true; render(); });
+</script>
+</body>
+</html>
